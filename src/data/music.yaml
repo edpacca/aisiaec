@@ -1,5 +1,18 @@
-- name: "West"
+- title: "West"
   platform: "bandcamp"
   year: 2016
-  link: "https://link.not.a.site"
-  embedLink: "https://link.not.a.site/embed"
+  link: "https://alliseeisanemptycircle.bandcamp.com/album/west"
+  embedId: "2157248465"
+
+- title: "Blackburn Sessions"
+  platform: "bandcamp"
+  year: 2017
+  link: "https://alliseeisanemptycircle.bandcamp.com/album/blackburn-sessions"
+  embedId: "4001176222"
+
+
+- title: "Meridian"
+  platform: "bandcamp"
+  year: 2019
+  link: "https://alliseeisanemptycircle.bandcamp.com/album/meridian"
+  embedId: "1192724555"

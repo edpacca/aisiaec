@@ -1,6 +1,12 @@
 <script lang="ts">
-	import { parseVideoData } from '#lib/parser';
+	import { parseMediaData } from '../../lib/parser.ts';
 	import videoYaml from '../../data/videos.yaml?raw';
+	import VideoBlock from './VideoBlock.svelte';
 
-	const videos = parseVideoData(videoYaml);
+	const videos = parseMediaData(videoYaml);
 </script>
+
+
+{#each videos as video}
+	<VideoBlock video={video}/>
+{/each}

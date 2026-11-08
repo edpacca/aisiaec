@@ -11,6 +11,7 @@
 <nav>
 	<a href="/music" class:active={page.url.pathname === "/music"}>music</a>
 	<a href="/video" class:active={page.url.pathname === "/video"}>video</a>
+	<a href="/about" class:active={page.url.pathname === "/about"}>about</a>
 </nav>
 
 <main>
@@ -40,7 +41,7 @@
 	}
 
 	a.active {
-		color: var(--accent);
+		color: var(--c-primary);
 	}
 
 	main {

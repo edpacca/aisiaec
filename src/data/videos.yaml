@@ -1,4 +1,42 @@
-- name: "Example Video"
-  year: 2024
-  link: "https://www.youtube.com/watch?v=VIDEO_ID"
-  embedLink: "https://www.youtube.com/embed/VIDEO_ID"
+- title: "Fangs"
+  description: "Live at the Village"
+  year: 2019
+  link: "https://www.youtube.com/watch?v=O7PL8ON3Si0"
+  embedId: "O7PL8ON3Si0"
+
+- title: "Midnight Rugs"
+  description: "(Music Video)"
+  year: 2019
+  link: "https://www.youtube.com/watch?v=xNxS47u04Y8"
+  embedId: "xNxS47u04Y8"
+
+- title: "Loon (Acoustic)"
+  description: "Live at the Tabernacle"
+  year: 2019
+  link: "https://www.youtube.com/watch?v=KJMQUJkeCPE"
+  embedId: "KJMQUJkeCPE"
+
+- title: "Powertoke"
+  description: "(Music Video)"
+  year: 2017
+  link: "https://www.youtube.com/watch?v=eTKtKAulmaU"
+  embedId: "eTKtKAulmaU"
+
+- title: "West"
+  description: "Live at Sneaky Pete's"
+  year: 2018
+  link: "https://www.youtube.com/watch?v=91iOqdbrvaw"
+  embedId: "91iOqdbrvaw"
+
+- title: "Defbones"
+  description: "Live at the Hug & Pint"
+  year: 2019
+  link: "https://www.youtube.com/watch?v=7fp1ISJW2a8"
+  embedId: "7fp1ISJW2a8"
+
+- title: "Gaziltela"
+  description: "Live at the Village"
+  year: 2019
+  link: "https://www.youtube.com/watch?v=mj0qMG3po-s"
+  embedId: "mj0qMG3po-s"
+

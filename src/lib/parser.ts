@@ -1,5 +1,5 @@
 import YAML from 'yaml';
-import type { MusicData, VideoData } from './types';
+import type { MediaData } from './types';
 
 // Takes raw YAML text rather than a file path. Components import data files
 // with Vite's `?raw` suffix (e.g. `import yaml from '../../data/music.yaml?raw'`)
@@ -13,40 +13,26 @@ function isObject(v: unknown): v is Record<string, unknown> {
 	return typeof v === 'object' && v !== null;
 }
 
-function hasBaseFields(v: Record<string, unknown>): boolean {
+function hasMediaDataFields(v: Record<string, unknown>): boolean {
 	return (
-		typeof v.name === 'string' &&
+		typeof v.title === 'string' &&
 		typeof v.link === 'string' &&
-		typeof v.embedLink === 'string' &&
+		typeof v.embedId === 'string' &&
 		(v.year === undefined || typeof v.year === 'number') &&
-		(v.imgPath === undefined || typeof v.imgPath === 'string')
+		(v.imgPath === undefined || typeof v.imgPath === 'string') &&
+		(v.description === undefined || typeof v.description === 'string')
 	);
 }
 
-function isMusicData(v: unknown): v is MusicData {
-	return (
-		isObject(v) && hasBaseFields(v) && (v.platform === 'spotify' || v.platform === 'bandcamp')
-	);
+function isMediaData(v: unknown): v is MediaData {
+	return isObject(v) && hasMediaDataFields(v);
 }
 
-function isVideoData(v: unknown): v is VideoData {
-	return isObject(v) && hasBaseFields(v);
-}
-
-export function parseMusicData(text: string): MusicData[] {
+export function parseMediaData(text: string): MediaData[] {
 	const data = parseYaml(text);
-	if (!Array.isArray(data)) throw new Error('Music data must be an array');
+	if (!Array.isArray(data)) throw new Error('Media data must be an array');
 	data.forEach((item, i) => {
-		if (!isMusicData(item)) throw new Error(`Invalid music entry at index ${i}: ${JSON.stringify(item)}`);
-	});
-	return data;
-}
-
-export function parseVideoData(text: string): VideoData[] {
-	const data = parseYaml(text);
-	if (!Array.isArray(data)) throw new Error('Video data must be an array');
-	data.forEach((item, i) => {
-		if (!isVideoData(item)) throw new Error(`Invalid video entry at index ${i}: ${JSON.stringify(item)}`);
+		if (!isMediaData(item)) throw new Error(`Invalid media entry at index ${i}: ${JSON.stringify(item)}`);
 	});
 	return data;
 }
