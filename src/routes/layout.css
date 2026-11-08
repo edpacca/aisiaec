@@ -1,15 +1,15 @@
 @import '../styles/fonts.css';
 
 :root {
-	--c-bg: #140a04;
-	--c-surface: #281f1b;
-	--c-surface-2: #232733;
-	--c-border: #2c313c;
-	--c-text: #e6e8ee;
-	--c-muted: #9aa2b1;
-	--c-primary: #6d8bff;
-	--c-primary-fg: #0b1020;
-	--c-accent: #f5a623;
+	--c-bg: #000000;
+	--c-surface: #0E1C26;
+	--c-surface-2: #2A454B;
+	--c-border: #2c3a3c;
+	--c-text: #E6E8E6;
+	--c-muted: #898a89;
+	--c-primary: #7ce5fc;
+	--c-primary-fg: var(--c-surface-2);
+	--c-accent: #f8c065;
 	--c-danger: #ff5c6c;
 
 	--f-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;

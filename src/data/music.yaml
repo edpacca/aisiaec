@@ -1,0 +1,5 @@
+- name: "West"
+  platform: "bandcamp"
+  year: 2016
+  link: "https://link.not.a.site"
+  embedLink: "https://link.not.a.site/embed"

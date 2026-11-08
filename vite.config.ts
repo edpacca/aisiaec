@@ -10,10 +10,9 @@ export default defineConfig({
 				runes: ({ filename }) =>
 					filename.split(/[/\\]/).includes('node_modules') ? undefined : true
 			},
-			// Outputs plain HTML/CSS/JS to /build, deployable to any static host.
-			// fallback: SPA shell served by the host for unknown paths, so the
-			// [...rest] catch-all route can redirect them to /music.
-			adapter: adapter({ fallback: '404.html' })
+			// Outputs plain HTML/CSS to /build, deployable to any static host.
+			// Unknown paths are handled by static/404.html (meta-refresh to /music).
+			adapter: adapter()
 		})
 	]
 });
