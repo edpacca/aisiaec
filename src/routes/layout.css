@@ -1,0 +1,47 @@
+@import '../styles/fonts.css';
+
+:root {
+	--c-bg: #140a04;
+	--c-surface: #281f1b;
+	--c-surface-2: #232733;
+	--c-border: #2c313c;
+	--c-text: #e6e8ee;
+	--c-muted: #9aa2b1;
+	--c-primary: #6d8bff;
+	--c-primary-fg: #0b1020;
+	--c-accent: #f5a623;
+	--c-danger: #ff5c6c;
+
+	--f-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+	--f-display: 'MajorMonoDisplay';
+	--f-mono: ui-monospace, 'SF Mono', 'Cascadia Code', 'Consolas', monospace;
+
+	--text-base: 1rem;
+	--leading: 1.6;
+	--radius: 0.75rem;
+	--gap: 1.5rem;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: var(--text-base);
+}
+
+body {
+	margin: 0;
+	background-color: var(--c-bg);
+	color: var(--c-text);
+	font-family: var(--f-display);
+	line-height: var(--leading);
+}
+
+nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
