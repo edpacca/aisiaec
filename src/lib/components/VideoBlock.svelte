@@ -16,11 +16,11 @@
 		<a href={link}>{video.title} by All I See is an Empty Circle</a>
 	</iframe>
 </div>
-<hr/>
+<hr />
 
 <style>
 	iframe {
-		width: 80%;
+		width: min(80%, 700px);
 		aspect-ratio: 16 / 9;
 		border: 0;
 	}
@@ -35,16 +35,22 @@
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-        margin-bottom: 1em;
+		margin-bottom: 1em;
 	}
 
-    p {
-        margin: 0;
-        text-transform: lowercase;
-        font-style: italic;
-    }
+	p {
+		margin: 0;
+		text-transform: lowercase;
+		font-style: italic;
+	}
 
-    h2 {
-        margin-bottom: 0;
-    }
+	h2 {
+		margin-bottom: 0;
+	}
+
+	@media(max-width: 700px) {
+		iframe {
+			width: 100%;
+		}
+	}
 </style>

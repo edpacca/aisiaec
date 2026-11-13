@@ -45,3 +45,11 @@ nav {
 	justify-content: center;
 	align-items: center;
 }
+
+.bandname {
+	font-family: var(--f-display);
+	text-transform: none;
+	font-weight: bold;
+	color: var(--c-primary);
+}
+

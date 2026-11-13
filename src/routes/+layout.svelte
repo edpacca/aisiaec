@@ -9,20 +9,27 @@
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 
 <nav>
-	<a href="/music" class:active={page.url.pathname === "/music"}>music</a>
-	<a href="/video" class:active={page.url.pathname === "/video"}>video</a>
-	<a href="/about" class:active={page.url.pathname === "/about"}>about</a>
+	<div class="navlinks__container">
+		<a href="/music" class:active={page.url.pathname === '/music'}>Music</a>
+		<a href="/video" class:active={page.url.pathname === '/video'}>Video</a>
+		<a href="/about" class:active={page.url.pathname === '/about'}>About</a>
+	</div>
 </nav>
 
-<main>
+<main class:about={page.url.pathname === '/about'}>
 	{@render children()}
 </main>
 
+<footer>
+	<hr />
+	<div class="contact__container">
+		<h2>Contact</h2>
+		<a href="mailto:alliseeisanemptycircle@gmail.com">alliseeisanemptycircle@gmail.com</a>
+	</div>
+</footer>
+
 <style>
 	nav {
-		display: flex;
-		align-items: center;
-		gap: var(--gap);
 		padding: 1rem 1.5rem;
 		background: var(--c-surface);
 		border-bottom: 1px solid var(--c-border);
@@ -30,10 +37,20 @@
 		font-weight: 500;
 	}
 
+	.navlinks__container {
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		justify-content: space-around;
+		gap: var(--gap);
+		max-width: 500px;
+	}
+
 	a {
 		color: var(--c-muted);
 		text-decoration: none;
 		transition: color 0.15s;
+		font-size: 1.5rem;
 	}
 
 	a:hover {
@@ -45,8 +62,28 @@
 	}
 
 	main {
-		max-width: 48rem;
 		margin: 0 auto;
-		padding: 2.5rem 1.5rem;
+		text-align: center;
+		padding: 1.5rem;
+		max-width: 1600px;
+	}
+
+	.about {
+		padding: 0;
+	}
+
+	.contact__container {
+		padding: 1.5em;
+
+		h2 {
+			color: var(--c-primary);
+			margin-bottom: 0.25em;
+		}
+
+		a {
+			font-size: 1em;
+			font-family: var(--f-sans);
+		}
+
 	}
 </style>

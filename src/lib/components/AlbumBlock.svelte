@@ -17,9 +17,10 @@
 
 <style>
     iframe {
-        width: 80%;
         aspect-ratio: 1;
         border: 0;
+        margin: auto;
+        width: min(600px, 100%);
     }
 
     a {
@@ -32,5 +33,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        margin: auto;
     }
+
 </style>
