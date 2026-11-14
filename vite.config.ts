@@ -13,13 +13,11 @@ export default defineConfig({
 			// Outputs plain HTML/CSS to /build, deployable to any static host.
 			// Unknown paths are handled by static/404.html (meta-refresh to /music).
 			adapter: adapter(),
-			// GitHub Pages serves this repo at https://edpacca.github.io/aisiaec/,
-			// so production builds need the repo name as a base path. `vite dev`
-			// keeps serving from the root. Set BASE_PATH='' if you move to a custom domain.
+			// The site is served from the custom domain https://aisiaec.uk (see static/CNAME),
+			// so it lives at the root. Set BASE_PATH='/aisiaec' to serve from
+			// https://edpacca.github.io/aisiaec/ instead (and remove static/CNAME).
 			paths: {
-				base: process.argv.includes('dev')
-					? ''
-					: ((process.env.BASE_PATH ?? '/aisiaec') as '' | `/${string}`)
+				base: (process.env.BASE_PATH ?? '') as '' | `/${string}`
 			}
 		})
 	]
