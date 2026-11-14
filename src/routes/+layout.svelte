@@ -2,6 +2,7 @@
 	import './layout.css';
 	import favicon from '#lib/assets/favicon.svg';
 	import { page } from '$app/state';
+	import { resolve } from '$app/paths';
 
 	let { children } = $props();
 </script>
@@ -10,13 +11,13 @@
 
 <nav>
 	<div class="navlinks__container">
-		<a href="/music" class:active={page.url.pathname === '/music'}>Music</a>
-		<a href="/video" class:active={page.url.pathname === '/video'}>Video</a>
-		<a href="/about" class:active={page.url.pathname === '/about'}>About</a>
+		<a href={resolve('/music')} class:active={page.url.pathname.includes('/music')}>Music</a>
+		<a href={resolve('/video')} class:active={page.url.pathname.includes('/video')}>Video</a>
+		<a href={resolve('/about')} class:active={page.url.pathname.includes('/about')}>About</a>
 	</div>
 </nav>
 
-<main class:about={page.url.pathname === '/about'}>
+<main class:about={page.url.pathname.includes('/about')}>
 	{@render children()}
 </main>
 
@@ -85,5 +86,11 @@
 			font-family: var(--f-sans);
 		}
 
+	}
+
+	@media screen and (max-width: 440px) {
+		a {
+			font-size: 1rem;
+		}
 	}
 </style>

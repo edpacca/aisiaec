@@ -1,4 +1,5 @@
-<script>
+<script lang="ts">
+	import { asset } from '$app/paths';
 </script>
 
 <svelte:head><title>About · AISIAEC</title></svelte:head>
@@ -6,7 +7,7 @@
 <div class="img__container">
 	<h1>All i see is AN eMptY ciRcle</h1>
 	<div class="img__container">
-		<img class="img-landscape" alt="the circle" src="/images/AISIAEC3_wide.webp" />
+		<img class="img-landscape" alt="the circle" src={asset('images/AISIAEC3_wide.webp')} />
 	</div>
 </div>
 
@@ -52,7 +53,7 @@
 <img
 	class="img-portrait"
 	alt="The circle recording the midnight rugs music video at the pianodrome"
-	src="/images/pianodrome_v.webp"
+	src={asset('images/pianodrome_v.webp')}
 />
 
 <style>
@@ -75,6 +76,8 @@
 		top: 0;
 		z-index: 2;
 		font-size: 4em;
+		margin-left: 0.25em;
+		margin-right: 0.25em;
 	}
 
 	p {
@@ -88,15 +91,20 @@
 		font-family: var(--f-display);
 	}
 
-	@media (max-width: 700px) {
+    a, a:visited {
+        color: var(--c-link);
+    }
+
+	@media screen and (max-width: 700px) {
 		h1 {
 			font-size: 3em;
 		}
 	}
 
-	@media (max-width: 400px) {
+	@media screen and (max-width: 440px) {
 		h1 {
 			font-size: 2em;
 		}
 	}
+
 </style>
