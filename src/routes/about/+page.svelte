@@ -5,7 +5,7 @@
 <svelte:head><title>About · AISIAEC</title></svelte:head>
 
 <div class="img__container">
-	<h1>All i see is AN eMptY ciRcle</h1>
+	<h1 class="text-shadow">All i see is AN eMptY ciRcle</h1>
 	<div class="img__container">
 		<img class="img-landscape" alt="the circle" src={asset('images/AISIAEC3_wide.webp')} />
 	</div>

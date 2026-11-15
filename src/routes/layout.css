@@ -2,10 +2,10 @@
 
 :root {
 	--c-bg: #000000;
-	--c-surface: #0E1C26;
-	--c-surface-2: #2A454B;
+	--c-surface: #0e1c26;
+	--c-surface-2: #2a454b;
 	--c-border: #2c3a3c;
-	--c-text: #E6E8E6;
+	--c-text: #e6e8e6;
 	--c-link: #7cb8fc;
 	--c-muted: #898a89;
 	--c-primary: #7ce5fc;
@@ -54,3 +54,16 @@ nav {
 	color: var(--c-primary);
 }
 
+.text-shadow {
+	text-shadow:
+		1px 1px 2px white,
+		0 0 1em var(--c-primary),
+		0 0 0.2em var(--c-primary);
+}
+
+.box-shadow {
+	box-shadow:
+		1px 1px 2px white,
+		0 0 1em var(--c-primary),
+		0 0 0.2em var(--c-primary);
+}
