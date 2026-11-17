@@ -9,20 +9,30 @@
 <style>
 	.contact__container {
 		padding: 1.5em;
+	}
+
+	h2 {
+		color: var(--c-primary);
+		margin-bottom: 0.25em;
+	}
+
+	a {
+		font-size: 1.5em;
+		font-family: var(--f-sans);
+		color: var(--c-muted);
+	}
+
+	a:hover {
+		color: var(--c-text);
+	}
+
+	@media screen and (max-width: 440px) {
+		a {
+			font-size: 1em;
+		}
 
 		h2 {
-			color: var(--c-primary);
-			margin-bottom: 0.25em;
+			margin-bottom: 0;
 		}
-
-		a {
-			font-size: 1.5em;
-			font-family: var(--f-sans);
-            color: var(--c-muted);
-		}
-
-        a:hover {
-            color: var(--c-text);
-        }
 	}
 </style>

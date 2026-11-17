@@ -67,3 +67,9 @@ nav {
 		0 0 1em var(--c-primary),
 		0 0 0.2em var(--c-primary);
 }
+
+@media screen and (max-width: 440px) {
+	.hide-mobile {
+		display: none;
+	}
+}

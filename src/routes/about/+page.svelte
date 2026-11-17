@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Banner from '#lib/components/Banner.svelte';
 	import { asset } from '$app/paths';
 </script>
 
@@ -20,7 +21,9 @@
 </p>
 <p class="display">It's hard to put <span class="bandname">The Circle</span> in a box.</p>
 
-<hr />
+<div class="banner-margin">
+	<Banner/>
+</div>
 
 <h2>Stories</h2>
 
@@ -94,6 +97,10 @@
     a, a:visited {
         color: var(--c-link);
     }
+
+	.banner-margin {
+		margin: 2em 0;
+	}
 
 	@media screen and (max-width: 700px) {
 		h1 {
